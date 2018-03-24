@@ -1,0 +1,18 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+<div id="app">
+    <button v-on:click="changeFontsize3sec">フォントサイズを2倍にする</button>
+    <!-- ボタンを押すとここのPタグのフォントサイズが3秒間隔で14~28pxへ変化する -->
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            text_size: 14
+        },
+        methods: {
+            // 押すとPタグのフォントサイズがフォントサイズが3秒間隔で14~28pxへ変化するメソッドを実装してみましょう
+        }
+    })
+</script>

@@ -1,0 +1,26 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<style>
+  .text_green {
+    color: green
+  }
+
+  .text_red {
+    color: red
+  }
+</style>
+
+<div id="app">
+  <span v-bind:class="{ 'text_green':green, text_red:red }">ここのテキストの色がかわります</span>
+</div>
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      green: true,
+      red: false,
+    }
+  })
+</script>
+
+<!-- app.red = true -->

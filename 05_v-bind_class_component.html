@@ -1,0 +1,30 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<style>
+  .add_class {
+    color: green
+  }
+</style>
+
+<div id="app">
+  <app-component v-bind:class="{ add_class: add_class_conf }"></app-component>
+</div>
+
+<script>
+  Vue.component('app-component', {
+    template:
+      `
+        <div class="origin_class">
+          <span class="child_class">テスト要素</span>
+        </div>
+      `
+  })
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      add_class_conf: true
+    }
+  })
+</script>
+
+<!-- app.add_class_conf = false -->

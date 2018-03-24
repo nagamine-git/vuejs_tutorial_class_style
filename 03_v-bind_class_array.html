@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<style>
+  .text_green {
+    color: green
+  }
+
+  .text_bold {
+    font-weight: bold
+  }
+</style>
+
+<div id="app">
+  <span v-bind:class="[child_1, child_2]">ここのテキストの色がかわります</span>
+</div>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      child_1: 'text_green',
+      child_2: 'text_bold',
+    }
+  })
+</script>
+<!-- app.child_1 = '' -->

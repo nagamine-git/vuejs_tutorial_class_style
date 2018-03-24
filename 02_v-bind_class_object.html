@@ -1,0 +1,46 @@
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<style>
+  .text_green {
+    color: green
+  }
+
+  .text_red {
+    color: red
+  }
+</style>
+
+<div id="app">
+  <span v-bind:class="classObject">ここのテキストの色がかわります</span>
+</div>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      classObject: {
+        'text_green': true,
+        'text_red': false,
+      }
+    }
+  })
+</script>
+<!-- app.classObject.text_red = false -->
+
+<!-- ■■■ 算出プロパティを使ったこんな書き方もあります。 ■■■ -->
+
+<!-- <script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      'text_green': true,
+      'text_red': false,
+    },
+    computed: {
+      classObject: function () {
+        return {
+          'text_green': true,
+          'text_red': false,
+        }
+      }
+    }
+  })
+</script> -->
